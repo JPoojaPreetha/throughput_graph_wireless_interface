@@ -1,18 +1,17 @@
 import copy
 import re
 import datetime
-import copy
 import configuration as conf
-import re
+
 
 import matplotlib.dates as md
 import matplotlib.pyplot as plt
 from datetime import datetime
 import math
 import time
-import copy
 
 
+#graph method
 def graph(dates,oput,title,stfile):
     plt.subplots_adjust(bottom=0.3)
     plt.xticks( rotation=30, horizontalalignment='right' )
@@ -33,6 +32,7 @@ def throughput(fname):
     lines=infile.readlines()
     txfile=open("txfile.txt","w+")
     rxfile=open("rxfile.txt","w+")
+    
     #gather lines Tx Databytes and Rx Databytes into seperate files 
     for line in lines:
         if "Tx Data Bytes" in line:
@@ -70,7 +70,7 @@ def throughput(fname):
 
     graph(dates,tput,"Througput graph for tx databytes","txtput.png")
 
-
+    #throughput calculation for Tx
     rxb=[]
     rxt=[]
     rxfile=open("rxfile.txt","r")
