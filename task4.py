@@ -1,3 +1,8 @@
+'''
+input : log-file
+output: throughput graphs for Tx,Rx,Tx+Rx databytes
+'''
+
 import copy
 import re
 import datetime
